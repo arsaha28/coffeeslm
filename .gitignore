@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Large files: data and trained models (not for git)
+data/
+checkpoints/
+
+# Editor / OS
+.vscode/
+.DS_Store
