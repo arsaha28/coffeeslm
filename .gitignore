@@ -5,9 +5,9 @@ __pycache__/
 .pytest_cache/
 
 # Large files: data and trained models (not for git)
-data/
-checkpoints/
-logs/
+/data/
+/checkpoints/
+/logs/
 
 # Editor / OS
 .vscode/

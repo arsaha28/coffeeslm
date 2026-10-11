@@ -38,7 +38,7 @@ Status: ⬜ todo · 🔄 in progress · ✅ done
 ## Phase 1 — Data
 | Step | Task | Check | Status |
 |---|---|---|---|
-| 1.1 | `download.py`: stream URL → file in chunks, optional `max_bytes` | test with local `file://` URL | ⬜ |
+| 1.1 | `download.py`: stream URL → file in chunks, optional `max_bytes` | test with local `file://` URL | ✅ |
 | 1.2 | Trim file to last complete story (`<\|endoftext\|>` boundary) | test on sample | ⬜ |
 | 1.3 | Script: fetch TinyStories V2 train (500 MB) + valid → `data/raw/tinystories/` | log sizes | ⬜ |
 | 1.4 | Fetch one Wikipedia page ("Coffee") as plain text | log first 200 chars | ⬜ |
