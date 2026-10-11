@@ -32,7 +32,7 @@ Status: ⬜ todo · 🔄 in progress · ✅ done
 | 0.5 | First test for `device.py` | `pytest` passes | ✅ |
 | 0.6 | `git init` + `.gitignore` | `git status` clean of `.venv` | ✅ |
 | 0.7 | `logging_setup.py`: console + optional file | line in console and file | ✅ |
-| 0.8 | Test for `logging_setup.py` | `pytest` passes | ⬜ |
+| 0.8 | Test for `logging_setup.py` | `pytest` passes | ✅ |
 | 0.9 | `device.py` logs the chosen device | log line shows `mps` | ⬜ |
 
 ## Phase 1 — Data
