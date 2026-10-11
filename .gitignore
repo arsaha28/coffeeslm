@@ -7,6 +7,7 @@ __pycache__/
 # Large files: data and trained models (not for git)
 data/
 checkpoints/
+logs/
 
 # Editor / OS
 .vscode/

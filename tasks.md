@@ -10,6 +10,7 @@ Status: ⬜ todo · 🔄 in progress · ✅ done
 - Tokenizer: **byte-level BPE** (GPT-2 style), written by us, exported as `vocab.json` + `merges.txt`
 - Special tokens: `<|endoftext|>` (document separator), `<|im_start|>`, `<|im_end|>` (chat turns, stop signal)
 - Chat template: **ChatML** — `<|im_start|>user\n…<|im_end|>\n<|im_start|>assistant\n…<|im_end|>`
+- Logging: stdlib `logging`; `setup_logging()` called once per script; `logger = logging.getLogger(__name__)` per module; no `print()` in library code; log counts/sizes/durations. Event logs → `logs/<run>.log`, training metrics → `logs/<run>_metrics.csv`
 - Q&A dataset format: **messages JSONL** — `{"messages": [{"role": "user", "content": …}, {"role": "assistant", "content": …}]}`
 
 ## Data sources
@@ -30,6 +31,9 @@ Status: ⬜ todo · 🔄 in progress · ✅ done
 | 0.4 | `device.py`: pick MPS or CPU | prints `mps` | ✅ |
 | 0.5 | First test for `device.py` | `pytest` passes | ✅ |
 | 0.6 | `git init` + `.gitignore` | `git status` clean of `.venv` | ✅ |
+| 0.7 | `logging_setup.py`: console + optional file | line in console and file | ✅ |
+| 0.8 | Test for `logging_setup.py` | `pytest` passes | ⬜ |
+| 0.9 | `device.py` logs the chosen device | log line shows `mps` | ⬜ |
 
 ## Phase 1 — Data
 | Step | Task | Check | Status |
