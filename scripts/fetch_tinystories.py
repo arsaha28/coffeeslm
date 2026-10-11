@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+from coffee_slm.data.boundaries import fix_boundaries
 from coffee_slm.data.download import download
 from coffee_slm.data.trim import trim_to_last_separator
 from coffee_slm.logging_setup import setup_logging
@@ -16,7 +17,9 @@ def main() -> None:
     train = OUT_DIR / "train.txt"
     download(f"{BASE_URL}/TinyStoriesV2-GPT4-train.txt", train, max_bytes=TRAIN_MAX_BYTES)
     trim_to_last_separator(train)
-    download(f"{BASE_URL}/TinyStoriesV2-GPT4-valid.txt", OUT_DIR / "valid.txt")
+    valid = OUT_DIR / "valid.txt"
+    download(f"{BASE_URL}/TinyStoriesV2-GPT4-valid.txt", valid)
+    fix_boundaries(valid)  # source file starts mid-story and lacks a final separator
 
 
 if __name__ == "__main__":

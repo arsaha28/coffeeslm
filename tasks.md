@@ -40,7 +40,8 @@ Status: ⬜ todo · 🔄 in progress · ✅ done
 |---|---|---|---|
 | 1.1 | `download.py`: stream URL → file in chunks, optional `max_bytes` | test with local `file://` URL | ✅ |
 | 1.2 | Trim file to last complete story (`<\|endoftext\|>` boundary) | test on sample | ✅ |
-| 1.3 | Script: fetch TinyStories V2 train (500 MB) + valid → `data/raw/tinystories/` | log sizes | 🔄 |
+| 1.3 | Script: fetch TinyStories V2 train (500 MB) + valid → `data/raw/tinystories/` | log sizes | ✅ |
+| 1.3a | `boundaries.py`: drop partial first story, ensure final separator (valid file) | file starts with a full story, ends with `<\|endoftext\|>` | ✅ |
 | 1.4 | Fetch one Wikipedia page ("Coffee") as plain text | log first 200 chars | ⬜ |
 | 1.5 | Save page to `data/raw/wikipedia/` | file exists | ⬜ |
 | 1.6 | List of coffee page titles in config | load + log list | ⬜ |
